@@ -1,0 +1,10 @@
+## Interface: 11305
+## Title: CEPGP_BuffReward
+## Author: Earnil
+## Notes: Lets you reward Players that have Worldbuffs
+## Version: 0.100
+## Dependencies: CEPGP
+## DefaultState: enabled
+## SavedVariables: CEPGP_BuffReward
+
+CEPGP_BuffReward.lua

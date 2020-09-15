@@ -1,7 +1,7 @@
 local addonName, addon = ...
 
 local BuffEP = 8
-local validBuffs = {"Rallying Cry of the Dragonslayer", "Spirit of Zandalar", "Warchief's Blessing", "Songflower Serenade"}
+local validBuffs = {"Rallying Cry of the Dragonslayer", "Spirit of Zandalar", "Warchief's Blessing", "Songflower Serenade", "Mol'dar's Moxie", "Fengus' Ferocity", "Slip'kik's Savvy"}
 local DMTBuffs = {"Mol'dar's Moxie", "Fengus' Ferocity", "Slip'kik's Savvy"}
 
 --local DMTBuffs = {"Divine Spirit", "Power Word: Fortitude"}
@@ -110,7 +110,7 @@ local function AssignRaidBuffEP()
 			end
 			
 			if CEPGP_getIndex(player) then
-				fCEPGP_addEP(player, BuffEP, buffMessage)
+				CEPGP_addEP(player, BuffEP, buffMessage)
 			else
 				print("CEPGP_BuffReward: " .. player .. "not in Roster")
 			end

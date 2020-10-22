@@ -1,11 +1,16 @@
 local addonName, addon = ...
 
 local BuffEP = 8
-local validBuffs = {"Rallying Cry of the Dragonslayer", "Spirit of Zandalar", "Warchief's Blessing", "Songflower Serenade", "Mol'dar's Moxie", "Fengus' Ferocity", "Slip'kik's Savvy"}
-local DMTBuffs = {"Mol'dar's Moxie", "Fengus' Ferocity", "Slip'kik's Savvy"}
 
---local DMTBuffs = {"Divine Spirit", "Power Word: Fortitude"}
---local validBuffs = {"Inner Fire", "Divine Spirit", "Power Word: Fortitude", "Fear Ward", "Shadow Protection", "Rallying Cry of the Dragonslayer", "Mol'dar's Moxie", "Fengus' Ferocity", "Slip'kik's Savvy"}
+local locale = GetLocale()
+
+if locale == "deDE" then
+	local validBuffs ={"Schlachtruf der Drachentöter", "Geist von Zandalar", "Segen des Kriegshäuptlings", "Liedblumenserenade", "Mol'Dars Mut", "Fengus' Wildheit", "Slip'kik's Grips"}
+	local DMTBuffs = {"Mol'Dars Mut", "Fengus' Wildheit", "Slip'kik's Grips"}
+else
+	local validBuffs = {"Rallying Cry of the Dragonslayer", "Spirit of Zandalar", "Warchief's Blessing", "Songflower Serenade", "Mol'dar's Moxie", "Fengus' Ferocity", "Slip'kik's Savvy"}
+	local DMTBuffs = {"Mol'dar's Moxie", "Fengus' Ferocity", "Slip'kik's Savvy"}
+end
 
 
 local function fCEPGP_addEP(player, amount, msg)
@@ -71,6 +76,8 @@ end
 
 local function AssignRaidBuffEP()
 
+	print("BUFF REWARD")
+	do return end
 	if not UnitInRaid("player") then
 		message("You are not in a Raid Group")
 		return
@@ -136,6 +143,7 @@ StaticPopupDialogs["EXAMPLE_HELLOWORLD"] = {
 
 SLASH_CEPGPBR1 = '/cepbr'
 SLASH_CEPGPBR2 = '/br'
+SLASH_CEPGPBR3 = '/ceprb'
 function SlashCmdList.CEPGPBR(msg, editbox)   
 	StaticPopup_Show ("EXAMPLE_HELLOWORLD")
 end

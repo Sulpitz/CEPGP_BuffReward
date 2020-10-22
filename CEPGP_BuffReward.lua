@@ -76,8 +76,6 @@ end
 
 local function AssignRaidBuffEP()
 
-	print("BUFF REWARD")
-	do return end
 	if not UnitInRaid("player") then
 		message("You are not in a Raid Group")
 		return

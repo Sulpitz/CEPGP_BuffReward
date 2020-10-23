@@ -4,14 +4,25 @@ local BuffEP = 8
 
 local locale = GetLocale()
 
+
+local DMTBuffs = {}
+local validBuffs = {}
+
 if locale == "deDE" then
-	local validBuffs ={"Schlachtruf der Drachentöter", "Geist von Zandalar", "Segen des Kriegshäuptlings", "Liedblumenserenade", "Mol'Dars Mut", "Fengus' Wildheit", "Slip'kik's Grips"}
-	local DMTBuffs = {"Mol'Dars Mut", "Fengus' Wildheit", "Slip'kik's Grips"}
+	validBuffs ={"Schlachtruf der Drachentöter", "Geist von Zandalar", "Segen des Kriegshäuptlings", "Liedblumenserenade", "Mol'Dars Mut", "Fengus' Wildheit", "Slip'kik's Grips"}
+	DMTBuffs = {"Mol'Dars Mut", "Fengus' Wildheit", "Slip'kik's Grips"}
 else
-	local validBuffs = {"Rallying Cry of the Dragonslayer", "Spirit of Zandalar", "Warchief's Blessing", "Songflower Serenade", "Mol'dar's Moxie", "Fengus' Ferocity", "Slip'kik's Savvy"}
-	local DMTBuffs = {"Mol'dar's Moxie", "Fengus' Ferocity", "Slip'kik's Savvy"}
+	validBuffs = {"Rallying Cry of the Dragonslayer", "Spirit of Zandalar", "Warchief's Blessing", "Songflower Serenade", "Mol'dar's Moxie", "Fengus' Ferocity", "Slip'kik's Savvy"}
+	DMTBuffs = {"Mol'dar's Moxie", "Fengus' Ferocity", "Slip'kik's Savvy"}
 end
 
+--if locale == "deDE" then
+--	DMTBuffs = {"Divine Spirit", "Power Word: Fortitude"}
+--	validBuffs = {"Inner Fire", "Divine Spirit", "Power Word: Fortitude", "Fear Ward", "Shadow Protection", "Rallying Cry of the Dragonslayer", "Mol'dar's Moxie", "Fengus' Ferocity", "Slip'kik's Savvy"}
+--else
+--	DMTBuffs = {"Divine Spirit", "Power Word: Fortitude"}
+--	validBuffs = {"Inner Fire", "Divine Spirit", "Power Word: Fortitude", "Fear Ward", "Shadow Protection", "Rallying Cry of the Dragonslayer", "Mol'dar's Moxie", "Fengus' Ferocity", "Slip'kik's Savvy"}
+--end
 
 local function fCEPGP_addEP(player, amount, msg)
 	if amount == nil then

@@ -17,9 +17,11 @@ else
 end
 
 --if locale == "deDE" then
---	DMTBuffs = {"Divine Spirit", "Power Word: Fortitude"}
---	validBuffs = {"Inner Fire", "Divine Spirit", "Power Word: Fortitude", "Fear Ward", "Shadow Protection", "Rallying Cry of the Dragonslayer", "Mol'dar's Moxie", "Fengus' Ferocity", "Slip'kik's Savvy"}
+--	print("CLIENT DE")
+--	DMTBuffs = {"Göttlicher Willen", "Machtwort: Seelenstärke"}
+--	validBuffs = {"Inneres Feuer", "Göttlicher Willen", "Machtwort: Seelenstärke", "Furchtzauberschutz", "Schattenschutz", "Rallying Cry of the Dragonslayer", "Mol'dar's Moxie", "Fengus' Ferocity", "Slip'kik's Savvy"}
 --else
+--	print("Client EN")
 --	DMTBuffs = {"Divine Spirit", "Power Word: Fortitude"}
 --	validBuffs = {"Inner Fire", "Divine Spirit", "Power Word: Fortitude", "Fear Ward", "Shadow Protection", "Rallying Cry of the Dragonslayer", "Mol'dar's Moxie", "Fengus' Ferocity", "Slip'kik's Savvy"}
 --end
